@@ -1,0 +1,18 @@
+version: '2'
+services:
+  factorio:
+    image: factoriotools/factorio:stable
+    container_name: factorio
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+     - "34197:34197/udp"
+     - "27015:27015/tcp"
+    volumes:
+     - {your_factorio_directory}:/factorio
+    environment:
+     - GENERATE_NEW_SAVE=false
+     - LOAD_LATEST_SAVE=true
+     - USERNAME={your_name}
+     - TOKEN={your_token}
