@@ -1,10 +1,10 @@
 # 팩토리오 서버
 
-팩토리오 서버를 docker에서 편하기 돌리기 위한 저장소를 더 편하게 돌리기 위한 장치입니다
+팩토리오 서버를 docker에서 편하기 돌리기 위한 저장소를 더 편하게 돌리기 위한 저장소입니다
 
 최소한의 서버를 돌리기 위한 기능만 제한적으로 구현되어 있습니다
 
-더 자세한 정보를 위해선 [factorio-docker](https://github.com/factoriotools/factorio-docker) 레포지터리를 참고하세요
+더 자세한 정보와 세부 사항에 대해 확인하려면 [factorio-docker](https://github.com/factoriotools/factorio-docker) 을 참고하세요
 
 ## 필요 패키지
 
