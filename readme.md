@@ -28,6 +28,8 @@ curl -sSL get.docker.com | sh
 
 ## 사용법
 
+
+
 ```bash
 make <명령어>
 ```
@@ -44,3 +46,8 @@ make <명령어>
 | console | 서버 콘솔 열기 |
 | import-save | `./saves` 디렉토리 내 세이브 파일을 서버로 가져옴 |
 
+## config 파일 수정
+
+서버 디렉토리 내 `config/server-setting.json` 파일에서 서버 설정을 수정할 수 있습니다
+
+서버를 중단후 수정해야 변경내역이 저장됩니다
