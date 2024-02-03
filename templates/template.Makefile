@@ -1,5 +1,5 @@
-SAVENAME=_autosave1.zip
-FACTORIO_PATH={your_factorio_directory}
+SAVENAME=YOUR_SAVENAME
+FACTORIO_PATH=YOUR_FACTORIO_DIRECTORY
 
 all:
 	@echo "init"
@@ -18,14 +18,14 @@ init:
 	docker-compose up
 
 hardreset:
-	@echo WARNING! : Factorio server will be deleted.
+	@echo "WARNING! : Factorio server will be deleted."
 	@echo "> sudo rm $(FACTORIO_PATH)/* -rf"
 	@echo "> docker-compose down"
 	sleep 20
 	sudo rm $(FACTORIO_PATH)/* -rf
 	docker-compose down
 
-chown:
+lock:
 	sudo chown 845:845 $(FACTORIO_PATH)
 	sudo chmod -R 777 $(FACTORIO_PATH)
 

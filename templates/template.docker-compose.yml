@@ -10,9 +10,9 @@ services:
      - "34197:34197/udp"
      - "27015:27015/tcp"
     volumes:
-     - {your_factorio_directory}:/factorio
+     - YOUR_FACTORIO_DIRECTORY:/factorio
     environment:
      - GENERATE_NEW_SAVE=false
      - LOAD_LATEST_SAVE=true
-     - USERNAME={your_name}
-     - TOKEN={your_token}
+#     - USERNAME=YOUR_USERNAME
+#     - TOKEN=YOUR_TOKEN
