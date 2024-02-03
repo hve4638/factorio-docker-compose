@@ -1,27 +1,27 @@
 # factorio-docker-setup
 
-팩토리오 서버를 docker에서 편하기 돌리기 위한 저장소를 더 편하게 돌리기 위한 저장소입니다
+[factorio-docker](https://github.com/factoriotools/factorio-docker)의 이미지를 좀 더 간편하게 돌리기 위한 쉘스크립트 및 Makefile 집합입니다
 
-최소한의 서버를 돌리기 위한 기능만 제한적으로 구현되어 있으며 세부사항 및 트러블슈팅에 대한 정보는 [factorio-docker](https://github.com/factoriotools/factorio-docker)를 참고하세요
+해당 도커 이미지에 대한 세부사항 및 트러블슈팅에 대한 정보는 해당 저장소의 [readme.md](https://github.com/factoriotools/factorio-docker)를 참고하세요
 
 ## 필요 패키지
 
 `requirement.sh` 실행시 자동으로 필요한 패키지를 설치합니다
 
-수동 설치시 아래 패키지가
+수동 설치시 아래 패키지가 필요합니다
 
 - `make`
 - `docker`
 - `docker-compose`
 
-## 세팅
+## 초기 세팅
 
 `setup.sh` 실행 후 설명에 따라 다음을 입력하세요
 
-- 서버 디렉토리로 사용할 경로 (절대 경로로 입력)
-- import 시 사용할 저장 파일명
+- "factorio server directory" : 서버 디렉토리로 사용할 경로 (절대 경로로 입력)
+- "savefile name" : import 시 사용할 저장 파일명
 
-`make init`을 실행해 서버 디렉토리에 초기 파일을 실행합니다
+`make init`을 실행해 서버 디렉토리에 초기 파일을 생성합니다
 
 ## config 파일 수정
 
@@ -31,7 +31,7 @@
 
 서버 디렉토리 내 `config/server-setting.json` 파일에서 서버 설정을 수정할 수 있습니다
 
-서버를 중단후 수정해야 변경내역이 저장됩니다
+서버를 중단 후 수정해야 변경내역이 저장됩니다
 
 ### config
 
@@ -96,5 +96,4 @@ import-save 명령어는 `./saves/_autosave1.zip`을 서버로 가져옵니다
 
 `./setup.sh`에서 "Savefile name"을 default가 아닌 다른 이름으로 지정했다면, `_autosave1.zip` 대신 해당 파일명으로 변경하면 됩니다
 
-서버의 세이브파일을 내보내는 기능은 없습니다. 기존 [docker image 저장소](https://github.com/factoriotools/factorio-docker)에선 해당 파일을 내보내는 것보다 클라이언트 측에서 저장하는 것을 권장합니다
-
+서버의 세이브파일을 내보내기 위해선 해당 파일을 직접 내보내는 것보다 클라이언트 측에서 저장하는 것을 권장합니다
